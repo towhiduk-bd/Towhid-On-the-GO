@@ -1,0 +1,6 @@
+{
+  "name": "Towhid's Running Event Log",
+  "description": "Personal running log web app for Towhid with admin event management, Excel import with preview, Strava link integration, and public shareable view.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
