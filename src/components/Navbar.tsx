@@ -145,11 +145,70 @@ export const Navbar: React.FC<NavbarProps> = ({
 
                 <button
                   onClick={onOpenImportModal}
-                  className="inline-flex items-center gap-1.5 px-3 py-2 bg-white/5 border border-white/20 text-white font-bold uppercase tracking-widest text-xs hover:bg-white/10 transition-all"
+                  className="inline-flex items-center gap-1.5 px-3.5 py-2 bg-white/5 border border-white/20 text-white font-bold uppercase tracking-widest text-xs hover:bg-white/10 transition-all"
                   title="Import Excel file"
                 >
                   <FileSpreadsheet className="w-3.5 h-3.5 text-[#D9FF00]" />
                   <span className="hidden md:inline">Import</span>
+                </button>
+
+                {/* Export CSV button */}
+                <button
+                  onClick={onExportCsv}
+                  className="p-2 bg-white/5 border border-white/20 text-white hover:bg-white/10 transition-all"
+                  title="Export CSV"
+                >
+                  <Download className="w-4 h-4 text-[#D9FF00]" />
+                </button>
+
+                {/* Full Site Backup Sync & Netlify ZIP Download */}
+                <a
+                  href="/site-deploy.zip"
+                  download="netlify-site-deploy.zip"
+                  className="px-2.5 py-2 bg-sky-500/20 border border-sky-500/40 text-sky-400 text-xs font-bold uppercase tracking-wider hover:bg-sky-500/30 transition-all flex items-center gap-1.5"
+                  title="Download compiled static site ZIP ready for Netlify Drop"
+                >
+                  <Download className="w-3.5 h-3.5 text-sky-400" />
+                  <span>Download ZIP</span>
+                </a>
+
+                {onExportBackup && (
+                  <button
+                    onClick={onExportBackup}
+                    className="p-2 bg-white/5 border border-white/20 text-white hover:bg-white/10 transition-all hidden sm:flex"
+                    title="Download Full Site Backup JSON"
+                  >
+                    <Download className="w-4 h-4 text-emerald-400" />
+                  </button>
+                )}
+
+                {onImportBackup && (
+                  <>
+                    <input
+                      type="file"
+                      ref={fileInputRef}
+                      onChange={onImportBackup}
+                      accept=".json"
+                      className="hidden"
+                    />
+                    <button
+                      onClick={() => fileInputRef.current?.click()}
+                      className="px-2.5 py-2 bg-emerald-500/20 border border-emerald-500/40 text-emerald-400 text-xs font-bold uppercase tracking-wider hover:bg-emerald-500/30 transition-all flex items-center gap-1.5"
+                      title="Import Backup JSON to Sync Netlify Site"
+                    >
+                      <FileSpreadsheet className="w-3.5 h-3.5 text-emerald-400" />
+                      <span>Sync JSON</span>
+                    </button>
+                  </>
+                )}
+
+                {/* Database schema button */}
+                <button
+                  onClick={onOpenSqlModal}
+                  className="p-2 bg-white/5 border border-white/20 text-white hover:bg-white/10 transition-all hidden sm:flex"
+                  title="Supabase SQL Schema Setup"
+                >
+                  <Database className="w-4 h-4 text-white/70" />
                 </button>
               </>
             ) : null}
@@ -162,65 +221,6 @@ export const Navbar: React.FC<NavbarProps> = ({
             >
               <Share2 className="w-3.5 h-3.5 text-[#D9FF00]" />
               <span className="hidden sm:inline">{copied ? 'Copied!' : 'Share'}</span>
-            </button>
-
-            {/* Export CSV button */}
-            <button
-              onClick={onExportCsv}
-              className="p-2 bg-white/5 border border-white/20 text-white hover:bg-white/10 transition-all"
-              title="Export CSV"
-            >
-              <Download className="w-4 h-4 text-[#D9FF00]" />
-            </button>
-
-            {/* Full Site Backup Sync & Netlify ZIP Download */}
-            <a
-              href="/site-deploy.zip"
-              download="netlify-site-deploy.zip"
-              className="px-2.5 py-2 bg-sky-500/20 border border-sky-500/40 text-sky-400 text-xs font-bold uppercase tracking-wider hover:bg-sky-500/30 transition-all flex items-center gap-1.5"
-              title="Download compiled static site ZIP ready for Netlify Drop"
-            >
-              <Download className="w-3.5 h-3.5 text-sky-400" />
-              <span>Download ZIP</span>
-            </a>
-
-            {onExportBackup && (
-              <button
-                onClick={onExportBackup}
-                className="p-2 bg-white/5 border border-white/20 text-white hover:bg-white/10 transition-all hidden sm:flex"
-                title="Download Full Site Backup JSON"
-              >
-                <Download className="w-4 h-4 text-emerald-400" />
-              </button>
-            )}
-
-            {onImportBackup && (
-              <>
-                <input
-                  type="file"
-                  ref={fileInputRef}
-                  onChange={onImportBackup}
-                  accept=".json"
-                  className="hidden"
-                />
-                <button
-                  onClick={() => fileInputRef.current?.click()}
-                  className="px-2.5 py-2 bg-emerald-500/20 border border-emerald-500/40 text-emerald-400 text-xs font-bold uppercase tracking-wider hover:bg-emerald-500/30 transition-all flex items-center gap-1.5"
-                  title="Import Backup JSON to Sync Netlify Site"
-                >
-                  <FileSpreadsheet className="w-3.5 h-3.5 text-emerald-400" />
-                  <span>Sync JSON</span>
-                </button>
-              </>
-            )}
-
-            {/* Database schema button */}
-            <button
-              onClick={onOpenSqlModal}
-              className="p-2 bg-white/5 border border-white/20 text-white hover:bg-white/10 transition-all hidden sm:flex"
-              title="Supabase SQL Schema Setup"
-            >
-              <Database className="w-4 h-4 text-white/70" />
             </button>
 
             {/* Admin Toggle / Login Button */}
