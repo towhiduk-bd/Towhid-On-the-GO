@@ -38,13 +38,13 @@ export const StatsOverview: React.FC<StatsOverviewProps> = ({ stats }) => {
       <div className="relative overflow-hidden bg-gradient-to-r from-zinc-900 via-zinc-950 to-black border border-zinc-800 p-5 sm:p-7 rounded-2xl shadow-xl">
         <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
           <div className="flex items-center gap-4">
-            <div className="w-12 h-12 sm:w-14 sm:h-14 bg-[#D9FF00] rounded-2xl flex items-center justify-center shrink-0 shadow-[0_0_20px_rgba(217,255,0,0.25)] border-2 border-black">
-              <span className="text-xl sm:text-2xl font-black text-black italic">TR</span>
+            <div className="px-3 py-2 bg-[#D9FF00] rounded-2xl flex items-center justify-center shrink-0 shadow-[0_0_20px_rgba(217,255,0,0.25)] border-2 border-black">
+              <span className="text-xl sm:text-2xl font-black text-black italic tracking-tighter">TR_GO</span>
             </div>
             <div>
               <div className="flex items-center gap-2.5 flex-wrap">
                 <h2 className="text-xl sm:text-3xl font-black uppercase italic tracking-tight text-white">
-                  Towhid’s Running Log
+                  TR_GO — Towhid’s Running Log
                 </h2>
                 <span className="px-2.5 py-0.5 text-[10px] font-bold uppercase tracking-widest bg-[#D9FF00]/10 text-[#D9FF00] border border-[#D9FF00]/30 rounded-full">
                   Verified Runner

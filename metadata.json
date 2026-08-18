@@ -1,6 +1,6 @@
 {
-  "name": "Towhid's Running Event Log",
-  "description": "Personal running log web app for Towhid with comprehensive running activity history, interactive analytics dashboards, personal bio, and Strava integration.",
+  "name": "TR_GO",
+  "description": "TR_GO — High-performance running & endurance activity log, interactive statistics dashboard, race portfolio, and Strava analytics.",
   "requestFramePermissions": [],
   "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
 }

@@ -72,9 +72,9 @@ export const PersonalBio: React.FC<PersonalBioProps> = ({ bio }) => {
           <div className="flex flex-col sm:flex-row items-start sm:items-center gap-5">
             {/* Avatar Badge */}
             <div className="relative group">
-              <div className="w-20 h-20 sm:w-24 sm:h-24 bg-[#D9FF00] rounded-2xl flex items-center justify-center shrink-0 shadow-[0_0_25px_rgba(217,255,0,0.3)] border-2 border-black">
-                <span className="text-3xl sm:text-4xl font-black italic text-black font-sans">
-                  TR
+              <div className="px-4 py-3 sm:px-5 sm:py-4 bg-[#D9FF00] rounded-2xl flex items-center justify-center shrink-0 shadow-[0_0_25px_rgba(217,255,0,0.3)] border-2 border-black">
+                <span className="text-2xl sm:text-3xl font-black italic text-black font-sans tracking-tighter">
+                  TR_GO
                 </span>
               </div>
               <div className="absolute -bottom-1 -right-1 p-1.5 bg-emerald-500 rounded-full border-2 border-black" title="Verified Runner">

@@ -135,11 +135,11 @@ export default function App() {
       <footer className="border-t border-white/10 bg-[#050505] py-8 text-white/40 text-xs">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-4">
           <div className="flex items-center gap-3">
-            <div className="h-7 w-7 bg-[#D9FF00] text-black flex items-center justify-center font-black text-xs tracking-tighter italic">
-              TR
+            <div className="px-2 py-0.5 bg-[#D9FF00] text-black flex items-center justify-center font-black text-xs tracking-tighter italic rounded">
+              TR_GO
             </div>
-            <span className="font-black text-white uppercase tracking-wider">Towhid's Running Event Log</span>
-            <span className="text-white/40 font-bold uppercase tracking-wider">— Personal Running Event History & Strava Analytics</span>
+            <span className="font-black text-white uppercase tracking-wider">TR_GO</span>
+            <span className="text-white/40 font-bold uppercase tracking-wider">— Towhid's Running & Endurance Event Hub</span>
           </div>
 
           <div className="flex items-center gap-4 text-white/60 font-bold uppercase tracking-wider text-[11px]">

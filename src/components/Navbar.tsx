@@ -50,20 +50,20 @@ export const Navbar: React.FC<NavbarProps> = ({
           
           {/* Brand Logo & Heading */}
           <div className="flex items-center gap-3">
-            <div className="w-10 h-10 bg-[#D9FF00] rounded-full flex items-center justify-center shrink-0 shadow-[0_0_15px_rgba(217,255,0,0.3)]">
-              <div className="w-4 h-4 bg-black rounded-xs rotate-45"></div>
+            <div className="h-10 px-2.5 bg-[#D9FF00] rounded-xl flex items-center justify-center shrink-0 shadow-[0_0_15px_rgba(217,255,0,0.3)] border border-black/50">
+              <span className="text-sm font-black italic tracking-tighter text-black">TR_GO</span>
             </div>
             <div>
               <div className="flex items-center gap-2.5">
                 <h1 className="text-xl sm:text-2xl font-black uppercase tracking-tighter italic text-white font-sans">
-                  Towhid's Running Event Log
+                  TR_GO
                 </h1>
                 <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[10px] font-bold uppercase tracking-widest bg-white/5 text-white/70 border border-white/20">
                   <Globe className="w-3 h-3 text-[#D9FF00]" /> Verified Log
                 </span>
               </div>
               <p className="text-[11px] uppercase tracking-[0.15em] text-white/40 hidden sm:block font-bold">
-                Official Event History & Strava Analytics
+                Towhid’s Running & Endurance Event Hub
               </p>
             </div>
           </div>
